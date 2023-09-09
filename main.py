@@ -25,8 +25,10 @@ def checkin(Email,passwd):
             print("剩余流量==>",resp2.json().get('trafficInfo').get('unUsedTraffic'))
             print("已经使用==>",resp2.json().get('trafficInfo').get('lastUsedTraffic'))
             print("今日使用==>",resp2.json().get('trafficInfo').get('todayUsedTraffic'))
+            pushplus("vpnfree签到成功","剩余流量==>"+resp2.json().get('trafficInfo').get('unUsedTraffic')+"/n")
         else:
             print(resp2.json().get("msg"))
+            pushplus("vpnfree签到失败",print(resp2.json().get("msg")))
     return resp2
 def pushplus( title, content):
     content = content.replace("\n", "\n\n")
