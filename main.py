@@ -1,4 +1,5 @@
 import requests
+import os
 def checkin(Email,passwd):
     import requests
     url="https://go.runba.cyou/auth/login"
@@ -47,6 +48,6 @@ def pushplus( title, content):
         print(f"[Pushplus][Send Message Response]{resp.text}")
         return -1
     return 0
-checkin('1481826110@qq.com','aaabbb123')
+checkin(os.environ.get('user'),os.environ.get('password'))
 
 
