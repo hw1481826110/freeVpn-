@@ -1,3 +1,4 @@
+import requests
 def checkin(Email,passwd):
     import requests
     url="https://go.runba.cyou/auth/login"
