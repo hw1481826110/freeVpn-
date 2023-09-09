@@ -1,5 +1,6 @@
 import requests
 import os
+print("账号"+os.environ.get('user')+" 密码："+os.environ.get('password'))
 def checkin(Email,passwd):
     import requests
     url="https://go.runba.cyou/auth/login"
