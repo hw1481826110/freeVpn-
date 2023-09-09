@@ -21,10 +21,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Set environment variables
-      run: |
-         echo "USER=my_username" >> $GITHUB_ENV
-         echo "PASSWORD=my_password" >> $GITHUB_ENV
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
