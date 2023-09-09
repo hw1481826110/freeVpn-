@@ -14,6 +14,6 @@
 
 以上USER、PASSWORD为阿里云盘签到必填项 推送可以选择PUSHPLUS_TOKEN
 ```
-python checkin.py
+python main.py
 ```
 
