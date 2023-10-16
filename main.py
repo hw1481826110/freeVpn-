@@ -27,7 +27,12 @@ def checkin(Email,passwd):
             print("剩余流量==>",resp2.json().get('trafficInfo').get('unUsedTraffic'))
             print("已经使用==>",resp2.json().get('trafficInfo').get('lastUsedTraffic'))
             print("今日使用==>",resp2.json().get('trafficInfo').get('todayUsedTraffic'))
-            pushplus("vpnfree签到成功","*"*10+"签到成功"+10*"*"+"/n"+"剩余流量==>"+resp2.json().get('trafficInfo').get('unUsedTraffic')+"/n"+"已经使用==>",resp2.json().get('trafficInfo').get('lastUsedTraffic')+"/n"+"今日使用==>",resp2.json().get('trafficInfo').get('todayUsedTraffic'))
+            pushplus("vpnfree签到成功", f'''{"*" * 10}签到成功{"*" * 10}
+剩余流量==> {resp2.json().get('trafficInfo').get('unUsedTraffic')}
+已经使用==> {resp2.json().get('trafficInfo').get('lastUsedTraffic')}
+今日使用==> {resp2.json().get('trafficInfo').get('todayUsedTraffic')}''')
+
+            # pushplus("vpnfree签到成功","*"*10+"签到成功"+10*"*"+"/n"+"剩余流量==>"+resp2.json().get('trafficInfo').get('unUsedTraffic')+"/n"+"已经使用==>",resp2.json().get('trafficInfo').get('lastUsedTraffic')+"/n"+"今日使用==>",resp2.json().get('trafficInfo').get('todayUsedTraffic'))
         else:
             print(resp2.json().get("msg"))
             pushplus("vpnfree签到失败",resp2.json().get("msg"))
