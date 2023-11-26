@@ -1,4 +1,5 @@
 # freeVpn
+[# freeVpn]("https://go.runba.cyou/user")
  <https://go.runba.cyou/user>
 > 每日自动签到，不需要服务器，直接fork进仓库，然后点击actions，即可每日自动化运行
 ## 如何使用？ 
