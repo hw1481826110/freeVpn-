@@ -30,7 +30,9 @@ def checkin(Email,passwd):
             pushplus("vpnfree签到成功", f'''{"*" * 10}签到成功{"*" * 10}
 剩余流量==> {resp2.json().get('trafficInfo').get('unUsedTraffic')}
 已经使用==> {resp2.json().get('trafficInfo').get('lastUsedTraffic')}
-今日使用==> {resp2.json().get('trafficInfo').get('todayUsedTraffic')}''')
+今日使用==> {resp2.json().get('trafficInfo').get('todayUsedTraffic')}
+https://go.runba.cyou/user
+''')
 
             # pushplus("vpnfree签到成功","*"*10+"签到成功"+10*"*"+"/n"+"剩余流量==>"+resp2.json().get('trafficInfo').get('unUsedTraffic')+"/n"+"已经使用==>",resp2.json().get('trafficInfo').get('lastUsedTraffic')+"/n"+"今日使用==>",resp2.json().get('trafficInfo').get('todayUsedTraffic'))
         else:
