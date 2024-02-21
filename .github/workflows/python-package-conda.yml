@@ -1,0 +1,28 @@
+name: Run HanFuHui.py
+
+on:
+  push:
+    branches: [ main ]  # 可以根据你的分支名称进行调整
+  pull_request:
+    branches: [ main ]  # 可以根据你的分支名称进行调整
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v2
+      with:
+        python-version: "3.10"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+
+    - name: Run HanFuHui.py
+      run: python HanFuHui.py
