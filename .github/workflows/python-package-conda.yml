@@ -2,7 +2,7 @@ name: Python application
 
 on:
   schedule:
-    - cron: '57 59 23 * * *' # 在每天的23:59:57触发
+    - cron: '57 59 23 * *' # 在每天的23:59:57触发
 
 permissions:
   contents: read
