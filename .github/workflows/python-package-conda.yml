@@ -2,7 +2,13 @@ name: Python application
 
 on:
   schedule:
-    - cron: '57 59 23 * *'
+  - cron: 57 59 23 * *
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
 
 permissions:
   contents: read
