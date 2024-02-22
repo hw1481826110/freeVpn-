@@ -2,22 +2,19 @@ name: Python application
 
 on:
   schedule:
-  - cron: 57 59 23 * *
+    - cron: '57 59 23 * *'
   workflow_dispatch:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
-
 permissions:
   contents: read
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
